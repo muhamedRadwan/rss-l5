@@ -18,7 +18,7 @@ class RssServiceProvider extends ServiceProvider {
 	 */
 	public function boot()
 	{
-		$this->package('thujohn/rss');
+		//$this->package('thujohn/rss');
 	}
 
 	/**
@@ -28,10 +28,9 @@ class RssServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$this->app['rss'] = $this->app->share(function($app)
-		{
-			return new Rss;
-		});
+		$this->app->bind('rss', function ($app) {
+            return new Rss();
+        });
 	}
 
 	/**
@@ -41,7 +40,7 @@ class RssServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('rss');
+		return ['rss'];
 	}
 
 }
