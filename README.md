@@ -1,15 +1,12 @@
 # RSS
 
-RSS builder for Laravel 4
-
-[![Build Status](https://travis-ci.org/thujohn/rss-l4.png?branch=master)](https://travis-ci.org/thujohn/rss-l4)
-
+RSS builder for Laravel 5
 
 ## Installation
 
-Add `thujohn/rss` to `composer.json`.
+Add `mayconbordin/rss-l5` to `composer.json`.
 
-    "thujohn/rss": "~1.0"
+    "mayconbordin/rss-l5": "~1.1"
     
 Run `composer update` to pull down the latest version of RSS.
 
@@ -38,7 +35,7 @@ Returns the feed
 			$feed->item(array('title' => 'Item '.$i, 'description|cdata' => 'Description '.$i, 'link' => 'http://www.test.com/article-'.$i));
 		}
 
-		return Response::make($feed, 200, array('Content-Type' => 'text/xml'));
+		return response($feed, 200)->header('Content-Type', 'text/xml');
 	});
 
 Save the feed
