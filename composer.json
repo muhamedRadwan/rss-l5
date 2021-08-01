@@ -1,7 +1,7 @@
 {
     "name": "mayconbordin/rss-l5",
-    "description": "RSS builder for Laravel 5",
-    "keywords": ["rss", "laravel", "laravel5"],
+    "description": "RSS builder for Laravel 8",
+    "keywords": ["rss", "laravel", "laravel8"],
     "license": "MIT",
     "authors": [
         {
@@ -11,11 +11,15 @@
         {
             "name": "Maycon Viana Bordin",
             "email": "mayconvianabordin@gmail.com"
+        },
+        {
+            "name": "Mohamed Radwan",
+            "email": "muhameda.radwan@gmail.com"
         }
     ],
     "require": {
         "php": ">=5.3.0",
-        "illuminate/support": "5.*"
+        "illuminate/support": ">=5.*"
     },
     "autoload": {
         "psr-4": {
